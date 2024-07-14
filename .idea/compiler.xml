@@ -10,8 +10,5 @@
         <module name="restassured-api-java-paypal" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="APITesting" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

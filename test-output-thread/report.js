@@ -1,35 +1,35 @@
 $(document).ready(function() {
 CucumberHTML.timelineItems.pushArray([
   {
-    "id": "657b7f3d-4171-4806-80ea-417a5573b1a5",
+    "id": "3eca34ec-fc61-4fbd-8c57-796bd2f99f98",
     "feature": "To create a new product in paypal",
     "scenario": "To create new product using JSON data",
-    "start": 1720961471521,
-    "group": 16,
+    "start": 1720972940344,
+    "group": 17,
     "content": "",
     "tags": "@bookerapi,@createproduct,@createproductfromjson,",
-    "end": 1720961479344,
+    "end": 1720972949481,
     "className": "passed"
   },
   {
-    "id": "52392562-c14f-4c69-823e-63383fe0dbb3",
+    "id": "0c3284bc-0804-481a-a424-00706dea1465",
     "feature": "To create a new product in paypal",
     "scenario": "To create new product using cucumber Data Table",
-    "start": 1720961471525,
-    "group": 15,
+    "start": 1720972940340,
+    "group": 16,
     "content": "",
     "tags": "@bookerapi,@createproduct,@createviewupdateproductdatatable,@ignore,",
-    "end": 1720961480040,
-    "className": "passed"
+    "end": 1720972940914,
+    "className": "failed"
   }
 ]);
 CucumberHTML.timelineGroups.pushArray([
   {
-    "id": 15,
+    "id": 16,
     "content": "Thread[TestNG-PoolService-0,5,main]"
   },
   {
-    "id": 16,
+    "id": 17,
     "content": "Thread[TestNG-PoolService-1,5,main]"
   }
 ]);
