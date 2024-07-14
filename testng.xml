@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+    <test thread-count="3" name="TestAPI">
+<!--        <parameter name="browser" value="chrome" />-->
+<!--        <parameter name="env" value="uat" />-->
+        <classes>
+            <class name="runners.TestRunner"></class>
+        </classes>
+    </test> <!-- Test -->
+    <!--    <test thread-count="3" name="Testfirefox">-->
+    <!--        <parameter name="browser" value="firefox" />-->
+    <!--        <classes>-->
+    <!--            <class name="runners.TestRunner"></class>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+    <!--    <test thread-count="3" name="Testedge">-->
+    <!--        <parameter name="browser" value="edge" />-->
+    <!--        <classes>-->
+    <!--            <class name="runners.TestRunner"></class>-->
+    <!--        </classes>-->
+    <!--    </test> &lt;!&ndash; Test &ndash;&gt;-->
+</suite> <!-- Suite -->

@@ -1,0 +1,50 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "http://example.com/example.json",
+	"type": "object",
+	"title": "Generated schema for Root",
+	"description": "The root schema comprises the entire JSON document.",
+	"properties": {
+		"id": {
+			"type": "string"
+		},
+		"name": {
+			"type": "string"
+		},
+		"description": {
+			"type": "string"
+		},
+		"create_time": {
+			"type": "string"
+		},
+		"links": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"href": {
+						"type": "string"
+					},
+					"rel": {
+						"type": "string"
+					},
+					"method": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"href",
+					"rel",
+					"method"
+				]
+			}
+		}
+	},
+	"required": [
+		"id",
+		"name",
+		"description",
+		"create_time",
+		"links"
+	]
+}
