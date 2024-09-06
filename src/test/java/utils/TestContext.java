@@ -25,13 +25,13 @@ public class TestContext {
 		RestAssuredConfig config = CurlRestAssuredConfigFactory.createConfig(options); 
 		RestAssured.baseURI = PropertiesFile.getProperty("baseURL");
 		try {
-			return RestAssured.given()
-					.header("Authorization", TokenGenerator.accessToken())
-					.header("Accept", "application/json")
-					.config(config)
-					.filter(new RestAssuredRequestFilter())
-					.contentType(CONTENT_TYPE);
-//					.accept(CONTENT_TYPE);
+			RequestSpecification httpRequest = RestAssured.given();
+			httpRequest.header("Authorization", TokenGenerator.accessToken());
+			httpRequest.header("Accept", "application/json");
+			httpRequest.config(config);
+			httpRequest.filter(new RestAssuredRequestFilter());
+			httpRequest.contentType(CONTENT_TYPE);
+			return httpRequest;
 		} catch (OAuthSystemException | OAuthProblemException e) {
 			throw new RuntimeException(e);
 		}
