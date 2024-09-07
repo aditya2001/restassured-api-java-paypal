@@ -18,7 +18,9 @@ To be more precise, Cucumber can be defined as a testing framework, driven by pl
 Open the command prompt and navigate to the folder in which pom.xml file is present. Run the below Maven command.
 
 mvn clean test
+
 Once the execution completes report & log will be generated in below folder.
 
 Report: target/report
+
 Log: target/logs
