@@ -77,8 +77,14 @@ Path parameter is used to identify specific resource using its unique identifier
 
 httpRequest.queryParam("category","toys")
 
-Query parameter is used when we want to filter or sort the items.
+Query parameter is used when we want to filter or sort the items. Query parameters are the type of parameters that are added after the question mark ( ? ). 
+Usually, query parameters come in a key-value pair that is separated by an equal sign ( = ), and each key-value pair is joined together by an ampersand ( & ).
+https://api.example.com/users?id=123&name=John%20Appleseed
 
+The key-value parameter pairs that we can see are:
+
+id with a value of 123.
+name with a value of John Appleseed.
 
 ### **Jenkins Job and Results**
 
