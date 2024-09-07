@@ -56,5 +56,29 @@ httpRequest.header("Accept", "application/json");
 httpRequest.body(javaObject);
 
 ### **Query Parameter and Path Parameter**
+URI, endpoint, Query parameter, Path parameter
+
+https://api-m.sandbox.paypal.com/v1/catalogs/products/{productID}
+
+Protocol- https
+
+baseURL- api-m.sandbox.paypal.com
+
+endpoint- /v1/catalogs/products
+
+Path Parameter- {productID}
+
+Path parameter is used to identify specific resource using its unique identifier.Path parameters are variables in URL that you can pass to identify specific resource.
+
+Query Parameter- 
+
+Query parameter is used when we want to filter or sort the items.
+
 
 ### **Jenkins Job and Results**
+
+![img.png](img.png)
+
+![img_1.png](img_1.png)
+
+
