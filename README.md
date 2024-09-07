@@ -60,19 +60,20 @@ URI, endpoint, Query parameter, Path parameter
 
 https://api-m.sandbox.paypal.com/v1/catalogs/products/{productID}
 https://api-m.sandbox.paypal.com/v1/catalogs/product?category=toys
+
 Protocol- https
 
 baseURL- api-m.sandbox.paypal.com
 
 endpoint- /v1/catalogs/products
 
-Path Parameter- {productID}
+1. Path Parameter- {productID}
 
 httpRequest.pathParam("productID", context.session.get("productID"))
 
 Path parameter is used to identify specific resource using its unique identifier.Path parameters are variables in URL that you can pass to identify specific resource.
 
-Query Parameter-starts with ? followed by parameter and value
+2. Query Parameter-starts with ? followed by parameter and value
 
 httpRequest.queryParam("category","toys")
 
