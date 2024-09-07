@@ -32,3 +32,29 @@ The PayPal api is secured by Oauth2.0. I have created a Utility class TokenGener
 ### **Parallel Testing**
 We are using @DataProvider annotation with attribute parallel=true to run all the scenarios in parallel.
 
+### **Deserialization**
+We have created a utility ResponseHandler to achieve deserialization. Deserialization is a process of converting json string literal response to java object. To Achieve this we are using ObjectMapper class from Jackson library. The simple readValue API of the ObjectMapper is used to parse or deserialize json string literal to Java Object.
+Below is a simple example of converting a JSON String to a Java object using the ObjectMapper class:
+
+String json = "{ \"color\" : \"Black\", \"type\" : \"BMW\" }";
+Car car = objectMapper.readValue(json, Car.class);
+
+The readValue() function also accepts other forms of input, such as a file containing JSON string:
+
+Car car = objectMapper.readValue(new File("src/test/resources/json_car.json"), Car.class);
+
+#### **Why Deserialization**
+For deserialization, we create a separate class that has same variables as present in JSON response. Basically this helps to validate the datatype of json. In case wrong datatype is received deserialization will throw error. This is easy to maintain for complex jsons. For data validation we need to write assertions.
+
+### **Serialization**
+Serialization is a process of converting POJO class objects to JSON. In RestAssured we send the Java class object in the body method and rest assured serializes it into json string and sends it over.
+
+RequestSpecification httpRequest = RestAssured.given();
+
+httpRequest.header("Accept", "application/json");
+
+httpRequest.body(javaObject);
+
+### **Query Parameter and Path Parameter**
+
+### **Jenkins Job and Results**
