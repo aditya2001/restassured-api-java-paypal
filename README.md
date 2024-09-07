@@ -24,3 +24,11 @@ Once the execution completes report & log will be generated in below folder.
 Report: target/report
 
 Log: target/logs
+
+### **Authentication and Authorization**
+The PayPal api is secured by Oauth2.0. I have created a Utility class TokenGenerator using oltu.oauth2.client which returns a Bearer Token in base64 encoded format. This bearer token value is then sent in httpRequest header while creating the Request Specification.
+
+
+### **Parallel Testing**
+We are using @DataProvider annotation with attribute parallel=true to run all the scenarios in parallel.
+
