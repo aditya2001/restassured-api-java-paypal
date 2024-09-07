@@ -43,7 +43,7 @@ The readValue() function also accepts other forms of input, such as a file conta
 
 Car car = objectMapper.readValue(new File("src/test/resources/json_car.json"), Car.class);
 
-#### **Why Deserialization**
+### **Why Deserialization**
 For deserialization, we create a separate class that has same variables as present in JSON response. Basically this helps to validate the datatype of json. In case wrong datatype is received deserialization will throw error. This is easy to maintain for complex jsons. For data validation we need to write assertions.
 
 ### **Serialization**
@@ -59,7 +59,7 @@ httpRequest.body(javaObject);
 URI, endpoint, Query parameter, Path parameter
 
 https://api-m.sandbox.paypal.com/v1/catalogs/products/{productID}
-
+https://api-m.sandbox.paypal.com/v1/catalogs/product?category=toys
 Protocol- https
 
 baseURL- api-m.sandbox.paypal.com
@@ -68,9 +68,13 @@ endpoint- /v1/catalogs/products
 
 Path Parameter- {productID}
 
+httpRequest.pathParam("productID", context.session.get("productID"))
+
 Path parameter is used to identify specific resource using its unique identifier.Path parameters are variables in URL that you can pass to identify specific resource.
 
-Query Parameter- 
+Query Parameter-starts with ? followed by parameter and value
+
+httpRequest.queryParam("category","toys")
 
 Query parameter is used when we want to filter or sort the items.
 
