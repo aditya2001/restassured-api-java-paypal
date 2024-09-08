@@ -1,4 +1,4 @@
-# **restassured-paypal-api-automation**
+# **PayPal API Automation**
 
 ### **Overview**
 API is application program interface, it's a piece of code used locally to perform specific operation like Apache POI, Selenium jars. When an API is available over the network for interaction between 2 applications then its called as Web Services API.
